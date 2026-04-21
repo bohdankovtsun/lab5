@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Моє Резюме - JS Version</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стилі для модального вікна */
+        #modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+            max-width: 400px;
+            width: 90%;
+            color: #333;
+        }
+
+            .modal-content input, .modal-content textarea {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            border: none;
+            background: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Кнопка перемикання теми */
+        #theme-toggle-btn {
+            float: right;
+            padding: 8px 15px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Стилі для ТЕМНОЇ ТЕМИ */
+        body.dark-mode {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        .dark-mode section {
+            background-color: #1e1e1e !important;
+            color: #e0e0e0 !important;
+            border-left-color: #bb86fc;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .dark-mode header {
+            background-color: #333 !important;
+        }
+
+        .dark-mode #theme-toggle-btn {
+            background: #bb86fc;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <!-- КНОПКА ПЕРЕМИКАННЯ (Пункт 4) -->
+        <button id="theme-toggle-btn">Нічний режим</button>
+        <h1>Ковцун Богдан</h1>
+        <p>Студент / JavaScript Developer</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Про себе</h2>
+            <p>Цікавлюся веб-програмуванням та інтерактивними інтерфейсами.</p>
+        </section>
+
+        <section>
+            <h2>Навички</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript (Vanilla & React)</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Відгуки роботодавців (API)</h2>
+            <div id="reviews-container">Завантаження відгуків...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакти: bogdan2006kov@gmail.com</p>
+        <p id="system-info" style="font-size: 10px; opacity: 0.6; margin-top: 10px;"></p>
+    </footer>
+
+    <div id="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal">&times;</button>
+            <h3>Зворотний зв'язок</h3>
+            <form action="https://formspree.io/f/xnjoolgw" method="POST">
+                <input name="name" type="text" placeholder="Ваше ім'я" required>
+                <input name="email" type="email" placeholder="Ваш Email" required>
+                <input name="phone" type="tel" placeholder="Номер телефону" required>
+                <textarea name="message" placeholder="Ваше повідомлення" rows="4"></textarea>
+                <button type="submit" style="width: 100%; padding: 12px; background: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer;">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

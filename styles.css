@@ -1,0 +1,57 @@
+﻿/* Селектор тегу body - налаштовуємо фон та шрифти для всієї сторінки */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Стилізація заголовка (Header) */
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Стилізація секцій (Section) - тут добре видно Box Model */
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 25px; /* Внутрішній відступ */
+    border-left: 5px solid #1a73e8; /* Ліва межа */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Стилізація заголовків h2 */
+h2 {
+    color: #1a73e8;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Стилізація списків */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Стилізація підвалу (Footer) */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
